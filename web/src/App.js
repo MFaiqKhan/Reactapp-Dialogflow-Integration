@@ -19,7 +19,7 @@ function App() {
       return [{ sender: "user", text: text }, ...prev];
     });
 
-    axios.post(`https://garbage-dialogflow.herokuapp.com/talktochatbot`, {
+    axios.post(`https://dialogflowwebhookserver.herokuapp.com/talktochatbot`, {
       text: text
     })
       .then((response) => {
